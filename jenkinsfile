@@ -5,7 +5,7 @@ pipeline {
    }
     environment {
         DOCKER_IMAGE_NAME = 'calculator'
-        GITHUB_REPO_URL = 'git@github.com:iHarshal08/DevOps_Calculator.git'
+        GITHUB_REPO_URL = 'https://github.com/iHarshal08/DevOps_Calculator.git'
     }
 
     stages {
