@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y dos2unix
 WORKDIR /app
 
 # Copy the calculator.jar script into the container
-COPY calculator.jar /app/calculator.jar
+COPY target/calculator.jar /app/calculator.jar
 
 # Convert line endings to Unix-style
 RUN dos2unix /app/calculator.jar
