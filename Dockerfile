@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 # Install dos2unix utility
-RUN apt-get update && apt-get install -y dos2unix
+RUN apt-get update && apt-get install -y dos2unix && apt-get install openjdk-17-jdk
 
 # Set the working directory
 WORKDIR /app
