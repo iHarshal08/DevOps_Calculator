@@ -39,7 +39,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.calculator.Main</mainClass> <!-- Update with your main class path -->
+                            <mainClass>com.calculator.ScientificCalculator</mainClass> <!-- Update with your main class path -->
                         </manifest>
                     </archive>
                 </configuration>
