@@ -13,3 +13,4 @@ COPY target/calculator.jar /app/calculator.jar
 
 # Set the default command to execute jar file
 CMD ["java", "-jar", "/app/calculator.jar"]
+
