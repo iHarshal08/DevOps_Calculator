@@ -18,6 +18,19 @@ pipeline {
             }
         }
 
+        stage('Run Tests') {
+                    steps {
+                        script {
+                            sh 'mvn test'  // Runs JUnit test cases
+                        }
+                    }
+                    post {
+                        always {
+                            junit '**/target/surefire-reports/*.xml'  // Collects test reports
+                        }
+                    }
+                }
+
         stage('Build Docker Image') {
             steps {
                 script {
