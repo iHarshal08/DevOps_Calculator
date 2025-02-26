@@ -72,3 +72,4 @@ public class ScientificCalculator {
         scanner.close();
     }
 }
+
