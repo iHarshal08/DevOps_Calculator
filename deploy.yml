@@ -12,7 +12,7 @@
       register: docker_pull_result
 
     - name: Stop existing container (if running)
-      command: docker rm -f calculator-container
+      command: docker rm -f calculator
       ignore_errors: yes
 
     - name: Running container
