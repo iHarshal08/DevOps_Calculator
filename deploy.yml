@@ -11,5 +11,9 @@
         source: pull
       register: docker_pull_result
 
+    - name: Stop existing container (if running)
+      command: docker rm -f calculator-container
+      ignore_errors: yes
+
     - name: Running container
       shell: docker run -it -d --name calculator iharshal/calculator /bin/bash
