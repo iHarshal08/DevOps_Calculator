@@ -5,25 +5,11 @@
   become: false
   tasks:
 
-    - name: Install Python Docker SDK
-      pip:
-        name: docker
-        executable: pip3
-
     - name: Pull Docker Image
       docker_image:
         name: "iharshal/calculator"
         source: pull
       register: docker_pull_result
-
-    - name: Display Docker Pull Result
-      debug:
-        var: docker_pull_result
-        
-    - name: Start Docker service
-      service:
-        name: docker
-        state: started
 
     - name: Running container
       shell: docker run -it -d --name calculator iharshal/calculator /bin/bash
